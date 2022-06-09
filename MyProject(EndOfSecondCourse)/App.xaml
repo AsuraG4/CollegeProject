@@ -1,0 +1,16 @@
+﻿<Application x:Class="MyProject_EndOfSecondCourse_.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MyProject_EndOfSecondCourse_"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Arial Black"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="#D2042D"/>
+            <Setter Property="Foreground" Value="#FFF"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="3"/>
+        </Style>
+    </Application.Resources>
+</Application>

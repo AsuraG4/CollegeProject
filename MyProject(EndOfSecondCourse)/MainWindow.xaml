@@ -1,0 +1,28 @@
+﻿<Window x:Class="MyProject_EndOfSecondCourse_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProject_EndOfSecondCourse_"
+        mc:Ignorable="d"
+        Title="The Greatest Quest 2" Icon="/ImagesAndSprites/AppIcon.png" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"  ResizeMode="CanResize" MinHeight="450" MinWidth="800">
+    
+    <Grid x:Name="MainMenu">
+        <Grid.Background>
+            <ImageBrush ImageSource="/ImagesAndSprites/Locations/MainMenu.jpg" />
+        </Grid.Background>
+        <DockPanel>
+
+            <TextBlock Text="The Greates Quest 2" FontFamily="Ink Free" FontSize="32" FontWeight="DemiBold" Margin="30" DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <StackPanel VerticalAlignment="Center" DockPanel.Dock="Bottom">
+
+                <Button x:Name="NewGame" Content="Новая Игра" FontSize="16"  Height="40" Width="250" Click="NewGame_Click"/>
+                <Button x:Name="Options" Content="Опции" FontSize="16"  Height="40" Width="250" Click="Options_Click"/>
+                <Button x:Name="Exit" Content="Выход" FontSize="16"  Height="40" Width="250" Click="Exit_Click"/>
+
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>
