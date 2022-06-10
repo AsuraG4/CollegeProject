@@ -22,48 +22,49 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="2">
+        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="2" Background="White">
 
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Background="White">
 
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <DockPanel LastChildFill="False" VerticalAlignment="Center">
 
-                    <StackPanel >
-                        <Image Source="/ImagesAndSprites/Stats/StrStat.png" Height="30" Width="30" Margin="3"/>
-                        <Image Source="/ImagesAndSprites/Stats/EndStat.png" Height="30" Width="30" Margin="3"/>
-                        <Image Source="/ImagesAndSprites/Stats/IntStat.png" Height="30" Width="30" Margin="3"/>
-                    </StackPanel>
+                    <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
+                        <Image Source="/ImagesAndSprites/Stats/StrStat.png" Height="30" Width="30" Margin="3" DockPanel.Dock="Left"/>
+                        <TextBlock Text="Сила:" Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
+                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left"/>
+                        <Button Content="+" Visibility="Visible" DockPanel.Dock="Right" Width="25"/>
+                    </DockPanel>
 
-                    <StackPanel>
-                        <TextBlock Text="Сила:" Margin="9" FontFamily="Cascadia Code" FontSize="16"/>
-                        <TextBlock Text="Выносливость:" Margin="9" FontFamily="Cascadia Code" FontSize="16"/>
-                        <TextBlock Text="Интеллект:" Margin="9" FontFamily="Cascadia Code" FontSize="16"/>
-                    </StackPanel>
+                    <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
+                        <Image Source="/ImagesAndSprites/Stats/EndStat.png" Height="30" Width="30" Margin="3" DockPanel.Dock="Left"/>
+                        <TextBlock Text="Выносливость:" Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
+                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left"/>
+                        <Button Content="+" Visibility="Visible" DockPanel.Dock="Right" Width="25"/>
+                    </DockPanel>
 
-                    <StackPanel>
-                        <TextBlock Text="{Binding}" Margin="9"/>
-                        <TextBlock Text="{Binding}" Margin="9"/>
-                        <TextBlock Text="{Binding}" Margin="9"/>
-                    </StackPanel>
-                    
-                </StackPanel>
-                                                               
-            </StackPanel>
-            
+                    <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
+                        <Image Source="/ImagesAndSprites/Stats/IntStat.png" Height="30" Width="30" Margin="3" DockPanel.Dock="Left"/>
+                        <TextBlock Text="Интеллект:" Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
+                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left"/>
+                        <Button Content="+" Visibility="Visible" DockPanel.Dock="Right" Width="25"/>
+                    </DockPanel>
+
+                </DockPanel>
+
         </Border>
 
-        <StackPanel Grid.Column="1" Grid.Row="2">
+        <DockPanel Grid.Column="1" Grid.Row="2">
 
-            <StackPanel>
+            <StackPanel DockPanel.Dock="Left">
                 <TextBlock Text="HP" Foreground="White" FontSize="16" FontFamily="Cascadia Code"/>
                 <TextBlock Text="Атака" Foreground="White" FontSize="16" FontFamily="Cascadia Code"/>
             </StackPanel>
 
-            <StackPanel>
-                
+            <StackPanel DockPanel.Dock="Right">
+                <ProgressBar Foreground="Red" Width="200" Height="7" Margin="6"/>
+                <ProgressBar Foreground="Yellow" Width="200" Height="7" Margin="6"/>
             </StackPanel>
                         
-        </StackPanel>
+        </DockPanel>
 
         <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="2">
 
@@ -79,10 +80,13 @@
             
         </Border>
         
-        <Image Source="/ImagesAndSprites/NPC/Friendly/Wizard.png" Grid.Column="1" Grid.Row="1"/>
+        <Image x:Name="NPCPlace" Grid.Column="1" Grid.Row="1"/>
 
-        <Button Grid.Column="0" Grid.Row="2" Content="Инвентарь" Height="50" VerticalAlignment="Bottom"/>
-        
+        <DockPanel Grid.Column="0" Grid.Row="2" LastChildFill="False">
+            <Button Content="Главное Меню" Height="50" DockPanel.Dock="Bottom"/>
+            <Button Content="Инвентарь" Height="50" DockPanel.Dock="Bottom"/>
+        </DockPanel>
+               
     </Grid>
     
 </Page>
