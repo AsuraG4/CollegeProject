@@ -24,5 +24,10 @@ namespace MyProject_EndOfSecondCourse_.Pages
         {
             InitializeComponent();
         }
+
+        private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

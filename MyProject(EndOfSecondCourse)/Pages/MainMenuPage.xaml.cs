@@ -27,7 +27,7 @@ namespace MyProject_EndOfSecondCourse_.Pages
 
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
-
+            Classes.Manager.MainAppFrame.Navigate(new Pages.TutorialPage());
         }
 
         private void Author_Click(object sender, RoutedEventArgs e)
