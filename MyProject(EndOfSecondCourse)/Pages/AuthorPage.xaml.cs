@@ -13,18 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyProject_EndOfSecondCourse_
+namespace MyProject_EndOfSecondCourse_.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для OptionsPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OptionsPage : Page
     {
-        public MainWindow()
+        public OptionsPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Pages.MainMenuPage());
-            Classes.Manager.MainAppFrame = MainFrame;
-        }        
+        }
+
+        private void GoBack_Click(object sender, RoutedEventArgs e)
+        {
+            Classes.Manager.MainAppFrame.GoBack();
+        }
     }
 }

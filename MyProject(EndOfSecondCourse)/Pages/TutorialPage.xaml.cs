@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyProject_EndOfSecondCourse_
+namespace MyProject_EndOfSecondCourse_.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для TutorialPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TutorialPage : Page
     {
-        public MainWindow()
+        public TutorialPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Pages.MainMenuPage());
-            Classes.Manager.MainAppFrame = MainFrame;
-        }        
+        }
     }
 }

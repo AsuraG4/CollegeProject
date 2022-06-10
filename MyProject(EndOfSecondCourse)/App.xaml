@@ -12,5 +12,9 @@
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="3"/>
         </Style>
+
+        <Style TargetType="Frame">
+            <Setter Property="NavigationUIVisibility" Value="Hidden"/>
+        </Style>
     </Application.Resources>
 </Application>
