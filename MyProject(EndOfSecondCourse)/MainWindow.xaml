@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:MyProject_EndOfSecondCourse_"
         mc:Ignorable="d"
         Title="The Greatest Quest 2" Icon="/ImagesAndSprites/AppIcon.png" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen"  ResizeMode="CanResize" MinHeight="450" MinWidth="800">
+        WindowStartupLocation="CenterScreen"  ResizeMode="CanResize" MinHeight="450" MinWidth="800"
+        WindowState="Maximized">
     
     <Grid>
         <Frame x:Name="MainFrame">

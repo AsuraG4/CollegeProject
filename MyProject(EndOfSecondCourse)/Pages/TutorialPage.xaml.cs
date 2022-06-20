@@ -29,5 +29,20 @@ namespace MyProject_EndOfSecondCourse_.Pages
         {
 
         }
+
+        private void MainMenuBt_Click(object sender, RoutedEventArgs e)
+        {
+            new Pages.PauseMenuGame().ShowDialog();
+        }
+
+        private void Inventory_Click(object sender, RoutedEventArgs e)
+        {
+            new Pages.InventoryGame().ShowDialog();
+        }
+
+        private void fightZone_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            fightZone.Children.Add(new Classes.EnemyView(new Classes.Enemy(10, 3, 5, 1)));
+        }
     }
 }

@@ -9,6 +9,10 @@
       Title="TutorialPage">
 
     <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/ImagesAndSprites/Locations/StandartBackGround.png"/>
+        </Grid.Background>
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -22,32 +26,33 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="2" Background="White">
+        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="4" Background="White">
 
 
                 <DockPanel LastChildFill="False" VerticalAlignment="Center">
+                    
+                        <TextBlock Text="Герой" Margin="2" FontSize="20" HorizontalAlignment="Center" FontFamily="Arial Black" DockPanel.Dock="Top"/>
+                    
+
+                    <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
+                        <TextBlock Text="Уровень: " Margin="2" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
+                        <TextBlock Text="{Binding}" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
+                    </DockPanel>
 
                     <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
                         <Image Source="/ImagesAndSprites/Stats/StrStat.png" Height="30" Width="30" Margin="3" DockPanel.Dock="Left"/>
-                        <TextBlock Text="Сила:" Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
-                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left"/>
+                        <TextBlock Text="Сила: " Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
+                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
                         <Button Content="+" Visibility="Visible" DockPanel.Dock="Right" Width="25"/>
                     </DockPanel>
 
                     <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
                         <Image Source="/ImagesAndSprites/Stats/EndStat.png" Height="30" Width="30" Margin="3" DockPanel.Dock="Left"/>
-                        <TextBlock Text="Выносливость:" Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
-                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left"/>
+                        <TextBlock Text="Выносливость: " Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
+                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
                         <Button Content="+" Visibility="Visible" DockPanel.Dock="Right" Width="25"/>
                     </DockPanel>
-
-                    <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
-                        <Image Source="/ImagesAndSprites/Stats/IntStat.png" Height="30" Width="30" Margin="3" DockPanel.Dock="Left"/>
-                        <TextBlock Text="Интеллект:" Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
-                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left"/>
-                        <Button Content="+" Visibility="Visible" DockPanel.Dock="Right" Width="25"/>
-                    </DockPanel>
-
+                   
                 </DockPanel>
 
         </Border>
@@ -79,12 +84,14 @@
             </StackPanel>
             
         </Border>
-        
-        <Image x:Name="NPCPlace" Grid.Column="1" Grid.Row="1"/>
+
+        <Grid x:Name="fightZone" Grid.Column="1" Grid.Row="1" MouseDown="fightZone_MouseDown"/>
+
+        <Image x:Name="NPCPlace" Grid.Column="1" Grid.Row="1" />
 
         <DockPanel Grid.Column="0" Grid.Row="2" LastChildFill="False">
-            <Button Content="Главное Меню" Height="50" DockPanel.Dock="Bottom"/>
-            <Button Content="Инвентарь" Height="50" DockPanel.Dock="Bottom"/>
+            <Button x:Name="MainMenuBt" Content="Главное Меню" Height="50" DockPanel.Dock="Bottom" Click="MainMenuBt_Click"/>
+            <Button x:Name="Inventory" Content="Инвентарь"  Height="50" DockPanel.Dock="Bottom" Click="Inventory_Click"/>
         </DockPanel>
                
     </Grid>

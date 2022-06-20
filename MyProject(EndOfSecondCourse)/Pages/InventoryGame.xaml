@@ -1,0 +1,35 @@
+﻿<Window x:Class="MyProject_EndOfSecondCourse_.Pages.InventoryGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProject_EndOfSecondCourse_.Pages"
+        mc:Ignorable="d"
+        Title="Инвентарь" Height="350" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/ImagesAndSprites/AppIcon.png">
+    
+    <Grid Background="White">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="Armor" Grid.Column="0" Grid.Row="0"/>
+        <Image Source="/ImagesAndSprites/Items/Armor.png" Grid.Column="0" Grid.Row="0" Margin="10"/>
+        
+        <Button x:Name="Weapons" Grid.Column="1" Grid.Row="0"/>
+        <Image Source="/ImagesAndSprites/Items/Sword.png" Grid.Column="1" Grid.Row="0" Margin="10"/>
+        
+        <Button x:Name="Potions" Grid.Column="0" Grid.Row="1"/>
+        <Image Source="/ImagesAndSprites/Items/PJar.png" Grid.Column="0" Grid.Row="1" Margin="10"/>
+
+        <Button x:Name="Others" Grid.Column="1" Grid.Row="1"/>
+        <Image Source="/ImagesAndSprites/Items/WrenchPic.png" Grid.Column="1" Grid.Row="1" Margin="10"/>
+                                
+    </Grid>
+</Window>
