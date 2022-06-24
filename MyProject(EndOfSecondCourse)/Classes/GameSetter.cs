@@ -41,8 +41,21 @@ namespace MyProject_EndOfSecondCourse_.Classes
                 ImageSource = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "bg" + EnemyCounter / 10 + ".jpg"))
             };                                                  // при делении целых чисел - рез целая часть, поэтому получаю bg0, bg1 и тд
             FightPlace.Children.Clear();                        // очищаю грид с противниками чтобы там никого не было
-            FightPlace.Children.Add(new EnemyView(new Enemy(100, 100, 100, 1)));    // добавляю нового врага, можно повесить рандом
+            FightPlace.Children.Add(GenerateEnemy());    // добавляю нового врага, можно повесить рандом
             deathTimer.Stop();
+        }
+
+        public static EnemyView GenerateEnemy()
+        {
+            Random rndm = new Random();
+
+            return new EnemyView(new Enemy
+                (
+                    rndm.Next(50, 251), // hp
+                    rndm.Next(1, 11),   // dmg
+                    rndm.Next(1, 6),    // lvl
+                    rndm.Next(1, 13))   // img
+                );
         }
     }
 }
