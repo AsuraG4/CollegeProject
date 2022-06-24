@@ -35,24 +35,24 @@ namespace MyProject_EndOfSecondCourse_.Classes
 
         public void Die()                               // когда враг умирает, тип его изображения меняется
         {
-            _typeEnemy = 0;                             // можешь сделать файл enemy0.png, где будет труп противника
+            _typeEnemy = 0;
+            GameSetter.UpdateEnemy();
         }
 
-        // МЕТОДЫ ДЛЯ EnemyView ||| СНАЧАЛА ИДИ ТУДА, ПОТОМ ВЕРНИСЬ
 
-        public float GetEnemyHealth()                   // метод возвращающий текущее значение здоровья
+        public float GetEnemyHealth()                   
         {
-            return _healthPoints;                       // вернул значение из поля здоровья
+            return _healthPoints;                       
         }
 
-        public float GetEnemyType()                     // метод возвращающий тип врага, используется для обновления изображения
+        public float GetEnemyType()                     
         {
-            return _typeEnemy;                          // вернул значение из поля типа
+            return _typeEnemy;                          
         }
 
-        public float GetEnemyLevel()                    // метод возвращающий уровень врага, используется для отображения уровня
+        public float GetEnemyLevel()                    
         {
-            return _level;                              // вернул значение из поля уровня
+            return _level;                              
         }
     }
 }

@@ -23,5 +23,45 @@ namespace MyProject_EndOfSecondCourse_.Pages
         {
             InitializeComponent();
         }
+
+        private void Others_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ((sender as Button).Content as TextBlock).Visibility = Visibility.Visible;
+        }
+
+        private void Potions_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ((sender as Button).Content as TextBlock).Visibility = Visibility.Visible;
+        }
+
+        private void Weapons_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ((sender as Button).Content as TextBlock).Visibility = Visibility.Visible;
+        }
+
+        private void Armor_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ((sender as Button).Content as TextBlock).Visibility = Visibility.Visible;
+        }
+
+        private void Armor_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ((sender as Button).Content as TextBlock).Visibility = Visibility.Hidden;
+        }
+
+        private void Weapons_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ((sender as Button).Content as TextBlock).Visibility = Visibility.Hidden;
+        }
+
+        private void Potions_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ((sender as Button).Content as TextBlock).Visibility = Visibility.Hidden;
+        }
+
+        private void Others_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ((sender as Button).Content as TextBlock).Visibility = Visibility.Hidden;
+        }
     }
 }

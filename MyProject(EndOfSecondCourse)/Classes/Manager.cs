@@ -14,5 +14,7 @@ namespace MyProject_EndOfSecondCourse_.Classes
             get;
             set;
         }
+
+        
     }
 }

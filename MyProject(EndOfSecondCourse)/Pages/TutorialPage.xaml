@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TutorialPage">
 
-    <Grid>
+    <Grid x:Name="MainGameBG">
 
         <Grid.Background>
             <ImageBrush ImageSource="/ImagesAndSprites/Locations/StandartBackGround.png"/>
@@ -33,44 +33,20 @@
                     
                         <TextBlock Text="Герой" Margin="2" FontSize="20" HorizontalAlignment="Center" FontFamily="Arial Black" DockPanel.Dock="Top"/>
                     
-
                     <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
                         <TextBlock Text="Уровень: " Margin="2" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
                         <TextBlock Text="{Binding}" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
                     </DockPanel>
 
-                    <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
-                        <Image Source="/ImagesAndSprites/Stats/StrStat.png" Height="30" Width="30" Margin="3" DockPanel.Dock="Left"/>
-                        <TextBlock Text="Сила: " Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
-                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
-                        <Button Content="+" Visibility="Visible" DockPanel.Dock="Right" Width="25"/>
+                    <DockPanel>
+                        <TextBlock Text="Убито Врагов:" Margin="2" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
+                        <TextBlock Text="{Binding}" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
                     </DockPanel>
 
-                    <DockPanel DockPanel.Dock="Top" Margin="3" LastChildFill="False">
-                        <Image Source="/ImagesAndSprites/Stats/EndStat.png" Height="30" Width="30" Margin="3" DockPanel.Dock="Left"/>
-                        <TextBlock Text="Выносливость: " Margin="2" FontFamily="Cascadia Code" FontSize="16" DockPanel.Dock="Left"/>
-                        <TextBlock Text="{Binding}" Margin="2" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
-                        <Button Content="+" Visibility="Visible" DockPanel.Dock="Right" Width="25"/>
-                    </DockPanel>
-                   
-                </DockPanel>
+            </DockPanel>
 
         </Border>
-
-        <DockPanel Grid.Column="1" Grid.Row="2">
-
-            <StackPanel DockPanel.Dock="Left">
-                <TextBlock Text="HP" Foreground="White" FontSize="16" FontFamily="Cascadia Code"/>
-                <TextBlock Text="Атака" Foreground="White" FontSize="16" FontFamily="Cascadia Code"/>
-            </StackPanel>
-
-            <StackPanel DockPanel.Dock="Right">
-                <ProgressBar Foreground="Red" Width="200" Height="7" Margin="6"/>
-                <ProgressBar Foreground="Yellow" Width="200" Height="7" Margin="6"/>
-            </StackPanel>
-                        
-        </DockPanel>
-
+      
         <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="2">
 
             <StackPanel Background="White" MouseDown="StackPanel_MouseDown" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
@@ -85,12 +61,10 @@
             
         </Border>
 
-        <Grid x:Name="fightZone" Grid.Column="1" Grid.Row="1" MouseDown="fightZone_MouseDown"/>
-
-        <Image x:Name="NPCPlace" Grid.Column="1" Grid.Row="1" />
-
+        <Grid x:Name="fightZone" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        
         <DockPanel Grid.Column="0" Grid.Row="2" LastChildFill="False">
-            <Button x:Name="MainMenuBt" Content="Главное Меню" Height="50" DockPanel.Dock="Bottom" Click="MainMenuBt_Click"/>
+            <Button x:Name="MainMenuBt" Content="Пауза" Height="50" DockPanel.Dock="Bottom" Click="MainMenuBt_Click"/>
             <Button x:Name="Inventory" Content="Инвентарь"  Height="50" DockPanel.Dock="Bottom" Click="Inventory_Click"/>
         </DockPanel>
                
