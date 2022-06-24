@@ -20,5 +20,11 @@ namespace MyProject_EndOfSecondCourse_.Classes
             get;
             set;
         }
+
+        public static TextBlock EnemyCounterTextBlock
+        {
+            get;
+            set;
+        }
     }
 }

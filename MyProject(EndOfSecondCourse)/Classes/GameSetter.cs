@@ -36,6 +36,7 @@ namespace MyProject_EndOfSecondCourse_.Classes
 
         public static void NextEnemy(object sender, EventArgs e)    // метод срабатывает по таймеру
         {
+            Manager.EnemyCounterTextBlock.Text = EnemyCounter.ToString();
             Manager.MainGameGrid.Background = new ImageBrush()// обновляю фон главного окна приложения
             {                                                   // фон меняется каждые 10 врагов так как счетчик делится на 10
                 ImageSource = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "bg" + EnemyCounter / 10 + ".jpg"))

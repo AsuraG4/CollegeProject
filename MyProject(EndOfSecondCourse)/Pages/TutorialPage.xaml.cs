@@ -21,6 +21,7 @@ namespace MyProject_EndOfSecondCourse_.Pages
         {
             InitializeComponent();
             Classes.Manager.MainGameGrid = MainGameBG;
+            Classes.Manager.EnemyCounterTextBlock = txtEnemyCounter;
             Classes.GameSetter.FightPlace = fightZone;      // устанавливаю значение свойству
 
             Classes.GameSetter.CurrentEnemy = new Classes.EnemyView(new Classes.Enemy(100, 3, 5, 1));

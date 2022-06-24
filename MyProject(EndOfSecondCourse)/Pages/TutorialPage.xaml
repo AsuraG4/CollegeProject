@@ -40,7 +40,7 @@
 
                     <DockPanel>
                         <TextBlock Text="Убито Врагов:" Margin="2" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
-                        <TextBlock Text="{Binding}" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
+                        <TextBlock x:Name="txtEnemyCounter" Text="0" DockPanel.Dock="Left" FontFamily="Cascadia Code" FontSize="16"/>
                     </DockPanel>
 
             </DockPanel>
