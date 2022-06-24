@@ -36,7 +36,7 @@ namespace MyProject_EndOfSecondCourse_.Classes
 
         public static void NextEnemy(object sender, EventArgs e)    // метод срабатывает по таймеру
         {
-            App.Current.MainWindow.Background = new ImageBrush()// обновляю фон главного окна приложения
+            Manager.MainGameGrid.Background = new ImageBrush()// обновляю фон главного окна приложения
             {                                                   // фон меняется каждые 10 врагов так как счетчик делится на 10
                 ImageSource = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "bg" + EnemyCounter / 10 + ".jpg"))
             };                                                  // при делении целых чисел - рез целая часть, поэтому получаю bg0, bg1 и тд

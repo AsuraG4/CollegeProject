@@ -15,6 +15,10 @@ namespace MyProject_EndOfSecondCourse_.Classes
             set;
         }
 
-        
+        public static Grid MainGameGrid
+        {
+            get;
+            set;
+        }
     }
 }

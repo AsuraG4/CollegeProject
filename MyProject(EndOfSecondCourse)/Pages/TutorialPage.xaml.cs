@@ -20,6 +20,7 @@ namespace MyProject_EndOfSecondCourse_.Pages
         public TutorialPage()
         {
             InitializeComponent();
+            Classes.Manager.MainGameGrid = MainGameBG;
             Classes.GameSetter.FightPlace = fightZone;      // устанавливаю значение свойству
 
             Classes.GameSetter.CurrentEnemy = new Classes.EnemyView(new Classes.Enemy(100, 3, 5, 1));
