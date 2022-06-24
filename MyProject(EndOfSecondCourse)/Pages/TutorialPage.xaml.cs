@@ -14,15 +14,18 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MyProject_EndOfSecondCourse_.Pages
-{
-    /// <summary>
-    /// Логика взаимодействия для TutorialPage.xaml
-    /// </summary>
+{    
     public partial class TutorialPage : Page
     {
         public TutorialPage()
         {
             InitializeComponent();
+            Classes.GameSetter.FightPlace = fightZone;      // устанавливаю значение свойству
+
+            Classes.GameSetter.CurrentEnemy = new Classes.EnemyView(new Classes.Enemy(100, 3, 5, 1));
+            fightZone.Children.Add(Classes.GameSetter.CurrentEnemy);            // добавляю первого врага
+
+            Classes.GameSetter.EnemyCounter = 0;
         }
 
         private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
@@ -39,10 +42,6 @@ namespace MyProject_EndOfSecondCourse_.Pages
         {
             new Pages.InventoryGame().ShowDialog();
         }
-
-        private void fightZone_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            fightZone.Children.Add(new Classes.EnemyView(new Classes.Enemy(10, 3, 5, 1)));
-        }
+        
     }
 }

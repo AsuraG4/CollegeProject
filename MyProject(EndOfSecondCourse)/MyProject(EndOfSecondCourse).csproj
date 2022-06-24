@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\EnemyView.cs" />
+    <Compile Include="Classes\GameSetter.cs" />
     <Compile Include="Classes\Manager.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

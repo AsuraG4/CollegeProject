@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyProject_EndOfSecondCourse_.Pages"
         mc:Ignorable="d"
-        Title="Инвентарь" Height="350" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/ImagesAndSprites/AppIcon.png">
-    
-    <Grid Background="White">
+        Title="Инвентарь" Height="400" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/ImagesAndSprites/AppIcon.png">
+
+    <Grid Background="#D2042D">
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -19,17 +19,33 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="Armor" Grid.Column="0" Grid.Row="0"/>
-        <Image Source="/ImagesAndSprites/Items/Armor.png" Grid.Column="0" Grid.Row="0" Margin="10"/>
-        
-        <Button x:Name="Weapons" Grid.Column="1" Grid.Row="0"/>
-        <Image Source="/ImagesAndSprites/Items/Sword.png" Grid.Column="1" Grid.Row="0" Margin="10"/>
-        
-        <Button x:Name="Potions" Grid.Column="0" Grid.Row="1"/>
-        <Image Source="/ImagesAndSprites/Items/PJar.png" Grid.Column="0" Grid.Row="1" Margin="10"/>
+        <Button x:Name="Armor" Grid.Column="0" Grid.Row="0" MouseEnter="Armor_MouseEnter" MouseLeave="Armor_MouseLeave">
+            <TextBlock Text="Броня" FontFamily="Impact" FontSize="25" Foreground="Black" Visibility="Hidden"/>
+            <Button.Background>
+                <ImageBrush ImageSource="/ImagesAndSprites/Items/Armor.png"/>
+            </Button.Background>
+        </Button>
 
-        <Button x:Name="Others" Grid.Column="1" Grid.Row="1"/>
-        <Image Source="/ImagesAndSprites/Items/WrenchPic.png" Grid.Column="1" Grid.Row="1" Margin="10"/>
-                                
+        <Button x:Name="Weapons" Grid.Column="1" Grid.Row="0" MouseEnter="Weapons_MouseEnter" MouseLeave="Weapons_MouseLeave">
+            <TextBlock Text="Оружие" Foreground="Black"  FontFamily="Impact" FontSize="25" Visibility="Hidden"/>
+            <Button.Background>
+                <ImageBrush ImageSource="/ImagesAndSprites/Items/Sword.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="Potions" Grid.Column="0" Grid.Row="1" MouseEnter="Potions_MouseEnter" MouseLeave="Potions_MouseLeave">
+            <TextBlock Text="Зелья" Foreground="Black" FontFamily="Impact" FontSize="25" Visibility="Hidden"/>
+            <Button.Background>
+                <ImageBrush ImageSource="/ImagesAndSprites/Items/PJar.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="Others" Grid.Column="1" Grid.Row="1" MouseEnter="Others_MouseEnter" MouseLeave="Others_MouseLeave">
+            <TextBlock Text="Прочее" Foreground="Black" FontFamily="Impact" FontSize="25" Visibility="Hidden"/>
+            <Button.Background>
+                <ImageBrush ImageSource="/ImagesAndSprites/Items/WrenchPic.png"/>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>
